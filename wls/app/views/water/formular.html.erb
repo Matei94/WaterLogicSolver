@@ -1,0 +1,51 @@
+<body style="background-image:url(back9000.jpg); 
+			 background-size: 100% 120%;
+			 background-position: left -1px;
+			 background-repeat: no-repeat;
+			 padding-top: 60px">
+	<center>
+	<font face="verdana" color="black" size = "15">Water Logic Solver</font> <br><br><br>
+	<%= form_tag ({action: "rezultat"}) do %>
+		<%= text_field_tag :bucket1_cap, "", :style => "width: 150px; height: 30px; text-align: center", 
+			:placeholder => "Bucket 1 capacity" %>
+		<%= text_field_tag :bucket2_cap, "", :style => "width: 150px; height: 30px; text-align: center", 
+			:placeholder => "Bucket 2 capacity" %>
+		<%= text_field_tag :bucket3_cap, "", :style => "width: 150px; height: 30px; text-align: center", 
+			:placeholder => "Bucket 3 capacity" %>
+		<%= text_field_tag :bucket4_cap, "", :style => "width: 150px; height: 30px; text-align: center", 
+			:placeholder => "Bucket 4 capacity" %>
+		<%= text_field_tag :bucket5_cap, "", :style => "width: 150px; height: 30px; text-align: center", 
+			:placeholder => "Bucket 5 capacity" %>
+		<br><br>
+
+		<%= text_field_tag :bucket1_init, "", :style => "width: 150px; height: 30px; text-align: center", 
+			:placeholder => "Bucket 1 initial" %>
+		<%= text_field_tag :bucket2_init, "", :style => "width: 150px; height: 30px; text-align: center", 
+			:placeholder => "Bucket 2 initial" %>
+		<%= text_field_tag :bucket3_init, "", :style => "width: 150px; height: 30px; text-align: center", 
+			:placeholder => "Bucket 3 initial" %>
+		<%= text_field_tag :bucket4_init, "", :style => "width: 150px; height: 30px; text-align: center", 
+			:placeholder => "Bucket 4 initial" %>
+		<%= text_field_tag :bucket5_init, "", :style => "width: 150px; height: 30px; text-align: center", 
+			:placeholder => "Bucket 5 initial" %>
+		<br><br><br>
+
+		<font face="verdana" color="black" size = "5">Put</font>
+		<%= text_field_tag :aim_volume, "", :style => "width: 50px; height: 20px; text-align: center"%>
+		<font face="verdana" color="black" size = "5"> litres in bucket number</font>
+		<%= text_field_tag :aim_glass, "", :style => "width: 50px; height: 20px; text-align: center"%>
+		<br><br><br>
+
+		<font face="arial" color="black" size = "6">Select valid moves</font><br><br>
+
+		<%= check_box_tag :cb_fill %> <font face="verdana" color="black" size = "4">Fill</font>
+		<%= check_box_tag :cb_empty %> <font face="verdana" color="black" size = "4">Empty</font>
+		<%= check_box_tag :cb_half %> <font face="verdana" color="black" size = "4">Half</font>
+		<br><br><br><br>
+
+
+		<%= submit_tag "Get Solution", :style => "width: 472px; height: 50px; background: #f4f4f4; 
+			font-size: 2em"%>
+	<% end %>
+	</center>
+</body

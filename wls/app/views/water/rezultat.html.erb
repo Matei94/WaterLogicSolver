@@ -1,0 +1,22 @@
+<audio autoplay>
+	<% if @rex != "Imposible" %>
+		<source src="cheer.mp3" type="audio/mpeg">
+	<% else %>
+		<source src="fail.mp3" type="audio/mpeg">
+	<% end %>
+</audio>
+<div style="float: right;"><%= link_to_function "Back", "history.back()"%></div>
+<center>
+<body style="background-image:url(back3.jpg); 
+			 background-size: cover;
+			 background-repeat: no-repeat;
+			 vertical-align: middle">
+
+	<font face="verdana" color="black" size = "12">Solution</font><br><br>
+
+	<% @rex.split(",").each do |state| %>
+		<pre><font face="verdana" color="black" size = "5"><%= state.to_s %></font><br></pre>
+	<% end %>
+
+</body>
+</center>
